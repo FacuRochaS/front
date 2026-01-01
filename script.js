@@ -1,5 +1,5 @@
 // Nuevo script.js para el flujo solicitado
-const API = window.location.origin.includes('localhost') ? 'https://be-imposto.onrender.com/api' : window.location.origin + '/api';
+const API = 'https://be-imposto.onrender.com/api';
 let playerId = null;
 let playerName = null;
 let lobbyId = null;
