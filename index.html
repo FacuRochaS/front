@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impostor Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="main-container">
+    <header>
+      <h1>Impostor</h1>
+    </header>
+    <div id="main-menu" class="card">
+      <button class="big-btn" id="play-btn">Jugar</button>
+      <button class="big-btn" id="add-word-btn">Agregar Palabras</button>
+    </div>
+    <div id="play-section" class="card" style="display:none;">
+      <button class="nav-btn" id="back-to-menu-play">Volver</button>
+      <div id="play-step-name">
+        <label for="playerNameInput">Tu nombre</label>
+        <input type="text" id="playerNameInput" placeholder="Tu nombre">
+        <button id="playerNameNext">Siguiente</button>
+      </div>
+      <div id="play-step-lobbies" style="display:none;">
+        <button class="nav-btn" id="back-to-name">Volver</button>
+        <button class="big-btn" id="create-lobby-btn">+ Crear Sala</button>
+        <div id="lobby-list"></div>
+      </div>
+      <div id="play-step-create-lobby" style="display:none;">
+        <button class="nav-btn" id="back-to-lobbies">Volver</button>
+        <h2>Configurar Partida</h2>
+        <label for="impostorCount">Cantidad de impostores</label>
+        <input type="number" id="impostorCount" min="1" max="5" value="1" placeholder="Cantidad de impostores">
+        <div id="category-list"></div>
+        <button id="createLobbyConfirm">Listo</button>
+      </div>
+      <div id="play-step-lobby-wait" style="display:none;">
+        <button class="nav-btn" id="back-to-lobbies-wait">Volver</button>
+        <h2>Lobby: <span id="lobbyHostName"></span></h2>
+        <div id="players-list"></div>
+        <button id="startGameBtn" style="display:none;">Empezar</button>
+        <div id="waiting-msg">Esperando jugadores...</div>
+      </div>
+      <div id="play-step-round" style="display:none;">
+        <button class="nav-btn" id="back-to-lobby-round">Volver</button>
+        <div id="secret-word" class="secret"></div>
+        <button id="newRoundBtn" style="display:none;">Nueva Ronda</button>
+      </div>
+      <div id="play-message"></div>
+    </div>
+    <div id="add-word-section" class="card" style="display:none;">
+      <button class="nav-btn" id="back-to-menu-add">Volver</button>
+      <h2>Agregar Palabra</h2>
+      <div id="add-category">
+        <label for="newCategoryName">Nueva categoría</label>
+        <input type="text" id="newCategoryName" placeholder="Nueva categoría">
+        <button id="addCategoryBtn">Crear Categoría</button>
+      </div>
+      <div id="add-word-form">
+        <label for="categorySelect">Categoría</label>
+        <select id="categorySelect"></select>
+        <label for="newWord">Palabra</label>
+        <input type="text" id="newWord" placeholder="Palabra">
+        <button id="addWordBtn">Agregar Palabra</button>
+      </div>
+      <div id="add-word-message"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
